@@ -1,0 +1,32 @@
+//s--->0S0/1S1/0/1/e
+//palindrome
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i,l,flag=0;
+	char s[100];
+	printf("Enter string:");
+	scanf("%s",&s);
+	l=strlen(s);
+	if(flag==0)
+	{
+		for(i=0;i<l;i++)
+		{
+			if(s[i]==s[l-i-1])
+			{
+				flag=1;
+			}
+			else
+			{
+				printf("String don't satisfy condition as palindrome");
+			}
+		}
+	}
+	if(flag==1)
+	{
+		printf("String is accepted\n");
+		printf("String is palindrome\n");
+	}
+	return 0;
+}
